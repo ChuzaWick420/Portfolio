@@ -1,0 +1,59 @@
+@import "./variables.css";
+
+body {
+    margin: 0px;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+#page {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--page_bg);
+    color: var(--text_color);
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.profile_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.pfp_container {
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    overflow: hidden;
+}
+
+#pfp {
+    width: 20vw;
+    aspect-ratio: 1;
+}
+
+#resume_btn_link button {
+    background: var(--secondary_color);
+    border: none;
+    padding: 20px;
+    border-radius: 20px;
+    color: var(--text_color);
+}
+
+/*Mobile changes*/
+@media (max-width: 768px) {
+
+    #header {
+        flex-direction: column;
+    }
+
+    #pfp {
+        width: 70vw;
+    }
+}
