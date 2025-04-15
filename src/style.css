@@ -1,6 +1,7 @@
 @import "./variables.css";
 
 body {
+    font-family: var(--font);
     margin: 0px;
     width: 100vw;
     min-height: 100vh;
@@ -44,6 +45,10 @@ body {
     padding: 20px;
     border-radius: 20px;
     color: var(--text_color);
+}
+
+#name_separator {
+    color: var(--secondary_color);
 }
 
 /*Mobile changes*/
