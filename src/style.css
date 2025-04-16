@@ -7,6 +7,25 @@ body {
     min-height: 100vh;
 }
 
+.section_div {
+    padding: 1rem;
+
+    h1,
+    h3 {
+        margin-block: 0.2rem;
+    }
+
+    li {
+        padding-block: 0.5rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary_color);
+    overflow-wrap: break-word;
+}
+
 #page {
     width: 100%;
     min-height: 100vh;

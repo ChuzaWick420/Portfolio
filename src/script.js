@@ -76,6 +76,8 @@ function createSection(section) {
     const section_elements = createSectionElements(section[1]);
     section_div.appendChild(section_elements);
 
+    section_div.className = "section_div";
+
     return section_div;
 }
 
@@ -112,7 +114,7 @@ function extractElementContents(section_element) {
     for (let i = 0; i < section_element["comments"].length; i++) {
         const list_item = document.createElement("li");
 
-        const text = document.createElement("p");
+        const text = document.createElement("span");
         text.innerText = section_element["comments"][i];
 
         list_item.appendChild(text);
@@ -123,16 +125,19 @@ function extractElementContents(section_element) {
     // append optional data
     if (section_element["code"]) {
         const list_item = document.createElement("li");
-        const para = document.createElement("p");
+        const parentText = document.createElement("span");
 
-        para.innerText = "code: ";
+        const text = document.createElement("span");
+        text.innerText = "Code: ";
 
         const link = document.createElement("a");
         link.href = section_element["code"]["url"];
         link.innerText = section_element["code"]["placeholder"];
 
-        list_item.appendChild(para);
-        list_item.appendChild(link);
+        parentText.appendChild(text);
+        parentText.appendChild(link);
+
+        list_item.appendChild(parentText);
 
         contents_list.appendChild(list_item);
     }
@@ -140,15 +145,18 @@ function extractElementContents(section_element) {
     if (section_element["source"]) {
         const list_item = document.createElement("li");
 
-        const para = document.createElement("p");
-        para.innerText = "source: ";
+        const parentText = document.createElement("span");
+        const text = document.createElement("span");
+        text.innerText = "Source: ";
 
         const link = document.createElement("a");
         link.href = section_element["source"];
         link.innerText = section_element["source"];
 
-        list_item.appendChild(para);
-        list_item.appendChild(link);
+        parentText.appendChild(text);
+        parentText.appendChild(link);
+
+        list_item.appendChild(parentText);
 
         contents_list.appendChild(list_item);
     }
