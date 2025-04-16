@@ -84,14 +84,22 @@ function createSectionElements(section_elements) {
     const list = document.createElement("ul");
 
     for (const element of Object.entries(section_elements)) {
+
+        const element_div = document.createElement("div");
+
         // element heading
         const element_name = document.createElement("h3");
         element_name.innerText = element[0];
-        list.appendChild(element_name);
+        element_div.appendChild(element_name);
 
         // element contents
         const contents = extractElementContents(element[1]);
-        list.appendChild(contents);
+        element_div.appendChild(contents);
+
+        const item_list = document.createElement("li");
+        item_list.appendChild(element_div);
+
+        list.appendChild(item_list);
     }
 
     return list;
@@ -129,7 +137,21 @@ function extractElementContents(section_element) {
         contents_list.appendChild(list_item);
     }
 
-    console.log(section_element);
+    if (section_element["source"]) {
+        const list_item = document.createElement("li");
+
+        const para = document.createElement("p");
+        para.innerText = "source: ";
+
+        const link = document.createElement("a");
+        link.href = section_element["source"];
+        link.innerText = section_element["source"];
+
+        list_item.appendChild(para);
+        list_item.appendChild(link);
+
+        contents_list.appendChild(list_item);
+    }
 
     return contents_list;
 }
