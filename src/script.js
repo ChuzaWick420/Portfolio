@@ -100,6 +100,7 @@ function createSectionElements(section_elements) {
 function extractElementContents(section_element) {
     const contents_list = document.createElement("ul");
 
+    // All comments
     for (let i = 0; i < section_element["comments"].length; i++) {
         const list_item = document.createElement("li");
 
@@ -110,6 +111,25 @@ function extractElementContents(section_element) {
 
         contents_list.appendChild(list_item);
     }
+
+    // append optional data
+    if (section_element["code"]) {
+        const list_item = document.createElement("li");
+        const para = document.createElement("p");
+
+        para.innerText = "code: ";
+
+        const link = document.createElement("a");
+        link.href = section_element["code"]["url"];
+        link.innerText = section_element["code"]["placeholder"];
+
+        list_item.appendChild(para);
+        list_item.appendChild(link);
+
+        contents_list.appendChild(list_item);
+    }
+
+    console.log(section_element);
 
     return contents_list;
 }
