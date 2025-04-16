@@ -42,7 +42,7 @@ function updatePage() {
 
     const sections_container = document.getElementById("sections_container");
 
-    for (const [key, value] of Object.entries(data)) {
+    for (const section of Object.entries(data)) {
         if (isFirst) {
             isFirst = false;
             continue;
@@ -59,17 +59,59 @@ function updatePage() {
         //          UL
         //              content
 
-        const section_div = document.createElement("div");
-
-        const section_heading = document.createElement("h1");
-        section_heading.innerText = key;
-
-        section_div.appendChild(section_heading);
-
+        const section_div = createSection(section);
         sections_container.appendChild(section_div);
-        console.log(key, value);
 
     }
+}
+
+function createSection(section) {
+    // heading
+    const section_div = document.createElement("div");
+    const section_heading = document.createElement("h1");
+    section_heading.innerText = section[0];
+    section_div.appendChild(section_heading);
+
+    // list
+    const section_elements = createSectionElements(section[1]);
+    section_div.appendChild(section_elements);
+
+    return section_div;
+}
+
+function createSectionElements(section_elements) {
+
+    const list = document.createElement("ul");
+
+    for (const element of Object.entries(section_elements)) {
+        // element heading
+        const element_name = document.createElement("h3");
+        element_name.innerText = element[0];
+        list.appendChild(element_name);
+
+        // element contents
+        const contents = extractElementContents(element[1]);
+        list.appendChild(contents);
+    }
+
+    return list;
+}
+
+function extractElementContents(section_element) {
+    const contents_list = document.createElement("ul");
+
+    for (let i = 0; i < section_element["comments"].length; i++) {
+        const list_item = document.createElement("li");
+
+        const text = document.createElement("p");
+        text.innerText = section_element["comments"][i];
+
+        list_item.appendChild(text);
+
+        contents_list.appendChild(list_item);
+    }
+
+    return contents_list;
 }
 
 init();
