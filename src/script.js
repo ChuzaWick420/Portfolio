@@ -8,9 +8,42 @@ async function init() {
 
     updateName(jsonData["name"], jsonData["login"]);
 
-    //debug
-    console.log(jsonData);
     updatePage();
+    updateContacts();
+}
+
+function updateContacts() {
+
+    const contacts_section = document.getElementById("contact_container");
+
+    const contact_list = document.createElement("ul");
+
+    for (const contact of Object.entries(data["Socials"])) {
+        console.log(contact);
+
+        const parentText = document.createElement("span");
+        const platformName = document.createElement("span");
+        const platformLink = document.createElement("a");
+
+        platformName.innerText = contact[0] + ": ";
+
+        platformLink.innerText = contact[1]["placeholder"];
+        platformLink.href = contact[1]["url"];
+
+        platformName.id = "platform_name";
+
+        parentText.appendChild(platformName);
+        parentText.appendChild(platformLink);
+
+        const list_item = document.createElement("li");
+
+        list_item.appendChild(parentText);
+        contact_list.appendChild(list_item);
+
+    }
+
+    contacts_section.appendChild(contact_list);
+
 }
 
 function updateName(name, githubName) {
@@ -30,6 +63,10 @@ function updateName(name, githubName) {
     text.appendChild(anonymous_name);
 
     contacts.appendChild(text);
+
+    // separator
+    const separator_bar = document.createElement("hr");
+    contacts.appendChild(separator_bar);
 }
 
 function updateImage(image_url) {

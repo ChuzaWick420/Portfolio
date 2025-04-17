@@ -22,12 +22,27 @@ body {
     ul {
         padding-left: 5vw;
     }
+
+    a {
+        color: var(--secondary_color);
+    }
+
+}
+
+#contact_container {
+    li {
+        padding-block: 10px;
+    }
 }
 
 a {
     text-decoration: none;
-    color: var(--secondary_color);
+    color: var(--text_color);
     overflow-wrap: break-word;
+}
+
+#platform_name {
+    color: var(--secondary_color);
 }
 
 #page {
