@@ -18,6 +18,10 @@ body {
     li {
         padding-block: 0.5rem;
     }
+
+    ul {
+        padding-left: 5vw;
+    }
 }
 
 a {
