@@ -19,8 +19,6 @@ function updateContacts() {
     const contact_list = document.createElement("ul");
 
     for (const contact of Object.entries(data["Socials"])) {
-        console.log(contact);
-
         const parentText = document.createElement("span");
         const platformName = document.createElement("span");
         const platformLink = document.createElement("a");
@@ -39,7 +37,6 @@ function updateContacts() {
 
         list_item.appendChild(parentText);
         contact_list.appendChild(list_item);
-
     }
 
     contacts_section.appendChild(contact_list);
@@ -51,15 +48,22 @@ function updateName(name, githubName) {
 
     let text = document.createElement("p");
 
-    let real_name = document.createTextNode(name);
-    let anonymous_name = document.createTextNode(githubName);
-
     let separator = document.createElement("span");
+    let real_name = document.createElement("h1");
+    let anonymous_name = document.createElement("h3");
+
+    real_name.id = "real_name";
+    anonymous_name.id = "anonymous_name";
+
+    real_name.innerText = name;
+
     separator.id = "name_separator";
-    separator.appendChild(document.createTextNode("@"));
+    separator.innerText = "@ ";
+
+    anonymous_name.appendChild(separator);
+    anonymous_name.appendChild(document.createTextNode(githubName));
 
     text.appendChild(real_name);
-    text.appendChild(separator);
     text.appendChild(anonymous_name);
 
     contacts.appendChild(text);
