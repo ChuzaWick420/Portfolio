@@ -1,10 +1,14 @@
 export const data = {
     Socials: {
-        "github": {
+        "Github": {
             placeholder: "github.com/ChuzaWick420",
             url: "https://github.com/ChuzaWick420"
         },
-        "itch.io": {
+        "LinkedIn": {
+            placeholder: "linkedin.com/in/chuzawick420/",
+            url: "https://www.linkedin.com/in/chuzawick420/"
+        },
+        "Itch.io": {
             placeholder: "itch.io/profile/chuzawick420",
             url: "https://itch.io/profile/chuzawick420"
         },
@@ -32,7 +36,7 @@ export const data = {
             placeholder: "shaderlabs.org/wiki/User:492543441826349066",
             url: "https://shaderlabs.org/wiki/User:492543441826349066"
         },
-        "GitLab": {
+        "Gitlab": {
             placeholder: "gitlab.com/ChuzaWick420",
             url: "https://gitlab.com/ChuzaWick420"
         },
@@ -60,8 +64,20 @@ export const data = {
                 url: "https://github.com/ChuzaWick420/rayTracing"
             },
             source: "https://chuzawick420.github.io/notes_publisher/Projects/rayTracing/proj_raytracing_main/"
-        }
+        },
+        "Tex Documents Template": {
+            comments: [
+                "A tex template to generate PDFs",
+                "Template has control parameters, used to change the color schemes"
+            ],
+            code: {
+                placeholder: "github.com/ChuzaWick420/tex_documents_template",
+                url: "https://github.com/ChuzaWick420/tex_documents_template"
+            },
+        },
     },
     Experience: {},
-    Contributions: {}
+    Contributions: {},
+    Education: {},
+    Interests: {}
 }
