@@ -93,6 +93,10 @@ a {
     color: var(--text_color);
 }
 
+#resume_btn_link button:hover {
+    cursor: pointer;
+}
+
 #name_separator {
     color: var(--secondary_color);
 }
