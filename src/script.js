@@ -1,12 +1,14 @@
 import { data } from "./data.js";
 
 async function init() {
-    let githubProfileData = await fetch("https://api.github.com/user/114288630");
-    let jsonData = await githubProfileData.json();
+    // let githubProfileData = await fetch("https://api.github.com/user/114288630");
+    // let jsonData = await githubProfileData.json();
+    //
+    updateImage("../assets/pfp.png");
 
-    updateImage(jsonData["avatar_url"]);
-
-    updateName(jsonData["name"], jsonData["login"]);
+    updateName(
+        "Muhammad Zaid", "ChuzaWick420"
+    );
 
     updatePage();
     updateContacts();
