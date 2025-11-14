@@ -47,6 +47,14 @@ export const data = {
         //    url: "https://gitlab.com/ChuzaWick420"
         //},
     },
+    Education: {
+        "Virtual University of Pakistan": {
+            comments: [
+                "Enrolled in BS - Computer Science",
+                "Study year: 2022 - 2026"
+            ],
+        }
+    },
     Experience: {
         "Inbound Agency LTD": {
             comments: [
@@ -59,11 +67,15 @@ export const data = {
         },
     },
     Projects: {
-        "notes_publisher": {
+        "Notes Publisher": {
             comments: [
-                "Markdown notes",
-                "A website for my notes",
-                "Uses LaTeX, Python, YAML, JavaScript, CSS, sh"
+                "Utilizing MarkDown, HTML, CSS, Python, YAML, LaTeX, bash",
+                "MarkDown notes written in Obsidian",
+                "Realtime backup on Google Drive in case of data corruption due to sudden power lose",
+                "Pushed to GitHub and Gitlab for additional backup in case of hardware failure",
+                "GitHub Actions generate the website using mkdocs",
+                "Website is hosted using Github Pages",
+                "Acts as a knowledge reservoir for myself and other people"
             ],
             code: {
                 placeholder: "github.com/ChuzaWick420/notes_publisher",
@@ -92,14 +104,6 @@ export const data = {
                 url: "https://github.com/ChuzaWick420/tex_documents_template"
             },
         },
-    },
-    Education: {
-        "Virtual University of Pakistan": {
-            comments: [
-                "Enrolled in BS - Computer Science",
-                "Study year: 2022 - 2026"
-            ],
-        }
     },
     //Contributions: {},
     //Interests: {}
