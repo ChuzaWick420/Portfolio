@@ -1,4 +1,10 @@
 export const data = {
+    Assets: {
+        "pfp": "../assets/pfp.png",
+        "real_name": "Muhammad Zaid",
+        "user_name": "ChuzaWick420",
+    },
+
     Socials: {
         "Github": {
             placeholder: "github.com/ChuzaWick420",
