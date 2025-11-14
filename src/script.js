@@ -1,12 +1,12 @@
 import { data } from "./data.js";
 
 async function init() {
-    let githubProfileData = await fetch("https://api.github.com/user/114288630");
-    let jsonData = await githubProfileData.json();
+    updateImage(data["Assets"]["pfp"]);
 
-    updateImage(jsonData["avatar_url"]);
-
-    updateName(jsonData["name"], jsonData["login"]);
+    updateName(
+        data["Assets"]["real_name"],
+        data["Assets"]["user_name"]
+    );
 
     updatePage();
     updateContacts();
@@ -77,17 +77,16 @@ function updateImage(image_url) {
     document.getElementById("pfp").src = image_url;
 }
 
-function updatePage() {
+function updatePage(sections_to_skip = 2) {
 
-    let isFirst = true;
+    let counter = 0;
 
     const sections_container = document.getElementById("sections_container");
 
     for (const section of Object.entries(data)) {
-        if (isFirst) {
-            isFirst = false;
-            continue;
-        }
+
+        counter++;
+        if (counter <= sections_to_skip) continue;
 
         const separator = document.createElement("hr");
         sections_container.appendChild(separator);
