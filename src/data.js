@@ -1,6 +1,6 @@
 export const data = {
     Assets: {
-        "pfp": "../assets/pfp.png",
+        "pfp": "assets/pfp.png",
         "real_name": "Muhammad Zaid",
         "user_name": "ChuzaWick420",
     },
