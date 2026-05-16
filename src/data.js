@@ -53,6 +53,13 @@ export const data = {
                 "Enrolled in BS - Computer Science",
                 "Study year: 2022 - 2026"
             ],
+        },
+        "National Skill Competency Test": {
+            comments: [
+                "Percentile: 90%",
+                "Conducted by Virtual University of Pakistan",
+                "Dated: April 2026",
+            ],
         }
     },
     Experience: {
@@ -82,6 +89,22 @@ export const data = {
                 url: "https://github.com/ChuzaWick420/notes_publisher"
             },
             source: "https://chuzawick420.github.io/notes_publisher/"
+        },
+        "FYP AI Based Puzzle Game": {
+            comments: [
+                "University's Final Year Project",
+                "Project Management",
+                "Layered Architecture",
+                "User Interface and navigation",
+                "Input handling",
+                "Event Listening (observer pattern)",
+                "Strategy pattern",
+                "Time Slicing"
+            ],
+            code: {
+                placeholder: "github.com/ChuzaWick420/FYP_AI_Based_Puzzle_Game",
+                url: "https://github.com/ChuzaWick420/FYP_AI_Based_Puzzle_Game"
+            }
         },
         "Ray Tracing": {
             comments: [
