@@ -47,42 +47,33 @@ export const data = {
         //    url: "https://gitlab.com/ChuzaWick420"
         //},
     },
-    Education: {
-        "Virtual University of Pakistan": {
+
+    Summary: "Computer Science student experienced in building software projects in Python and C++, including web publishing automation, game development, and multithreaded graphics programming. Strong foundation in software processes, architecture, design patterns, documentation, algorithms, data structures, version control and mathematics.",
+
+    Skills: {
+        "Technical": {
             comments: [
-                "Enrolled in BS - Computer Science",
-                "Study year: 2022 - 2026"
-            ],
+                "C, C++, Python, JavaScript",
+                "Git, LaTeX, SFML, Pygame, SQLite",
+                "Object Orientation, Design Patterns (Observer, Strategy), Version Control, CI/CD, Algorithms & Data structures, Unit Testing"
+            ]
         },
-        "National Skill Competency Test": {
+        "Soft": {
             comments: [
-                "Percentile: 90%",
-                "Conducted by Virtual University of Pakistan",
-                "Dated: April 2026",
-            ],
-        }
-    },
-    Experience: {
-        "Inbound Agency LTD": {
-            comments: [
-                "Front End Intern",
-                "Learnt the basis of HTML, CSS, JavaScript, React",
-                "Learnt handling Data Base queries (Strapi) from client",
-                "Worked in Multan, Pakistan",
-                "Worked between Jan 2024 - Feb 2024",
-            ],
+                "Abstract thinking",
+                "Critical thinking",
+                "Analytical problem-solving",
+                "Technical writing"
+            ]
         },
     },
+
     Projects: {
         "Notes Publisher": {
             comments: [
-                "Utilizing MarkDown, HTML, CSS, Python, YAML, LaTeX, bash",
-                "MarkDown notes written in Obsidian",
-                "Realtime backup on Google Drive in case of data corruption due to sudden power lose",
-                "Pushed to GitHub and Gitlab for additional backup in case of hardware failure",
-                "GitHub Actions generate the website using mkdocs",
-                "Website is hosted using Github Pages",
-                "Acts as a knowledge reservoir for myself and other people"
+                "Architected an automated personal knowledge-base pipeline that converts Markdown notes written in Obsidian into a published website using MkDocs, Python, and LaTeX. ",
+                "Configured a GitHub Actions workflow to automatically build and deploy the site to GitHub Pages on every push, eliminating manual deployment steps.",
+                "Designed an automated backup workflow using Google Drive, GitHub, and GitLab to provide redundant storage and reduce risk of data loss from hardware or power failures."
             ],
             code: {
                 placeholder: "github.com/ChuzaWick420/notes_publisher",
@@ -92,14 +83,9 @@ export const data = {
         },
         "FYP AI Based Puzzle Game": {
             comments: [
-                "University's Final Year Project",
-                "Project Management",
-                "Layered Architecture",
-                "User Interface and navigation",
-                "Input handling",
-                "Event Listening (observer pattern)",
-                "Strategy pattern",
-                "Time Slicing"
+                "Designed and built a puzzle game engine in Python using a layered architecture, applying the Observer and Strategy design patterns to decouple game logic from the UI (made with Pygame) and persistent data. ",
+                "Built a JSON and SQLite-backed persistence layer to store game state and user data.",
+                "Implemented time-slicing for input handling and event handling to keep the UI responsive during gameplay. "
             ],
             code: {
                 placeholder: "github.com/ChuzaWick420/FYP_AI_Based_Puzzle_Game",
@@ -108,8 +94,8 @@ export const data = {
         },
         "Ray Tracing": {
             comments: [
-                "Multi-threaded",
-                "Photorealistic"
+                "Developed a multi-threaded ray tracing renderer in C++ that distributes pixel computation across a configurable number of threads, boosting image generation by approximately 400% and shows the result on a SFML window.",
+                "Built a JSON-driven configuration system covering four parameter groups — scene objects (size, color, material, position), camera (position, orientation, focal length), image output (dimensions, samples per pixel), and thread count — so scenes can be re-rendered without touching code. "
             ],
             code: {
                 placeholder: "github.com/ChuzaWick420/rayTracing",
@@ -119,8 +105,7 @@ export const data = {
         },
         "Tex Documents Template": {
             comments: [
-                "A tex template to generate PDFs",
-                "Template has control parameters, used to change the color schemes"
+                "Created a LaTeX template with control parameters (used to change the color schemes) to generate PDFs according to user preference."
             ],
             code: {
                 placeholder: "github.com/ChuzaWick420/tex_documents_template",
@@ -128,6 +113,37 @@ export const data = {
             },
         },
     },
+
+    Experience: {
+        "Inbound Agency LTD": {
+            comments: [
+                "Front End Intern — Jan 2024 — Feb 2024 — Multan, Pakistan",
+                "Developed UI components using HTML, CSS, JavaScript, and React under senior developer guidance.",
+                "Performed database queries and content updates through a Strapi headless CMS."
+            ],
+        },
+    },
+
+
+    Education: {
+        "Virtual University of Pakistan": {
+            comments: [
+                "Enrolled in BS - Computer Science",
+                "Study year: 2022 - Expected 2026"
+            ],
+        },
+    },
+
+    Benchmarks: {
+        "National Skill Competency Test": {
+            comments: [
+                "Percentile: 90%",
+                "Conducted by Virtual University of Pakistan",
+                "Dated: April 2026",
+            ],
+        }
+    }
+
     //Contributions: {},
     //Interests: {}
 }

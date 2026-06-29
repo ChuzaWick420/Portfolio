@@ -112,13 +112,27 @@ function createSection(section) {
     section_heading.innerText = section[0];
     section_div.appendChild(section_heading);
 
-    // list
-    const section_elements = createSectionElements(section[1]);
-    section_div.appendChild(section_elements);
+    if (typeof (section[1]) == "string") {
+        const section_element = createTextElements(section[1]);
+        section_div.appendChild(section_element);
 
-    section_div.className = "section_div";
+        section_div.className = "section_div";
+    }
+
+    else {
+        const section_elements = createSectionElements(section[1]);
+        section_div.appendChild(section_elements);
+
+        section_div.className = "section_div";
+    }
 
     return section_div;
+}
+
+function createTextElements(text) {
+    const pageText = document.createElement("p");
+    pageText.innerText = text
+    return pageText;
 }
 
 function createSectionElements(section_elements) {
